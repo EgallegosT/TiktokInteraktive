@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Arena de burbujas — TikTok Live</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;700;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div id="app" class="stage">
+    <a href="/" class="back-link">← Menú</a>
+    <button id="tts-toggle" type="button" class="tts-pill on" title="Leer comentarios de seguidores">🔊 Voz ON</button>
+    <div id="status" class="status-pill">Conectando…</div>
+
+    <header class="hud">
+      <div class="hud-left">
+        <p class="tag">Arena de burbujas</p>
+        <h1>🫧 ¡Haz crecer tu burbuja!</h1>
+        <p class="hud-tip">Cuanto más grande, más difícil crecer — ¡sigan con tap tap!</p>
+      </div>
+      <div class="hud-right">
+        <p class="cta">Comenta <strong>jugar</strong> para entrar</p>
+        <p class="cta-sub">👆 Tap tap lento · 🎁 Regalo = gran impulso</p>
+        <p class="player-count"><span id="count">0</span> en la arena</p>
+      </div>
+    </header>
+
+    <aside id="leaderboard" class="leaderboard" aria-label="Top burbujas">
+      <p class="lb-title">👑 Top 3</p>
+      <ol id="lb-list" class="lb-list"></ol>
+    </aside>
+
+    <div id="arena" class="arena" aria-label="Arena de burbujas">
+      <div class="arena-grid" aria-hidden="true"></div>
+    </div>
+
+    <div id="toast" class="toast hidden" role="status"></div>
+
+    <section class="feed-section">
+      <h2 class="feed-title">⚡ Actividad</h2>
+      <ul id="feed" class="feed"></ul>
+    </section>
+
+    <footer class="foot">
+      <span id="demo-hint" class="demo-hint hidden">Demo: J · L · G · T (voz)</span>
+    </footer>
+  </div>
+  <script src="js/bubbles.js" type="module"></script>
+</body>
+</html>

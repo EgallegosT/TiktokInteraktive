@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Rey de la colina — TikTok Live</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;700;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div id="app" class="stage">
+    <a href="/" class="back-link">← Menú</a>
+    <button id="tts-toggle" type="button" class="tts-pill on">🔊 Voz ON</button>
+    <div id="status" class="status-pill">Conectando…</div>
+
+    <header class="hud">
+      <div>
+        <p class="hud-tag">Corona en vivo</p>
+        <h1>👑 REY DE LA COLINA</h1>
+        <p class="hud-sub">¡Conquista el trono con tap tap antes que te quiten la corona!</p>
+      </div>
+      <div class="hud-right">
+        <p class="cta">Comenta <strong>rey</strong> para subir a la colina</p>
+        <p class="hint">👆 Tap suma poder · 🎁 Regalo = golpe real</p>
+        <p class="round">Reinado <span id="round">1</span> · <span id="hill-n">0</span> en la colina</p>
+      </div>
+    </header>
+
+    <main class="main">
+      <section class="throne-zone">
+        <div id="corona-flash" class="corona-flash hidden">👑 ¡NUEVO REY!</div>
+        <div class="throne">
+          <div class="throne-glow"></div>
+          <p class="throne-label">TRONO</p>
+          <div id="king-slot" class="king-slot empty">
+            <p class="empty-msg">Comenta <strong>rey</strong><br/>para conquistar</p>
+          </div>
+          <p id="king-name" class="king-name">—</p>
+          <p id="king-score" class="king-score">0 pts</p>
+          <p id="reign-timer" class="reign-timer">Mantén la corona 45s</p>
+        </div>
+        <div class="chase-panel">
+          <p class="chase-title">⚔️ Retador #1</p>
+          <div id="challenger" class="challenger empty">
+            <span class="chase-empty">Sin retador… ¡sube tú!</span>
+          </div>
+          <div class="gap-bar-wrap">
+            <div id="gap-bar" class="gap-bar"></div>
+          </div>
+          <p id="gap-label" class="gap-label">—</p>
+        </div>
+      </section>
+
+      <aside class="side">
+        <h2>🏔️ Top colina</h2>
+        <ol id="leaderboard" class="leaderboard"></ol>
+        <div id="combo-flash" class="combo-flash hidden">🔥 COMBO x2</div>
+        <p class="side-tip">Supera al rey en puntos para robarle la corona al instante.</p>
+      </aside>
+    </main>
+
+    <div id="narrator-banner" class="narrator-banner hidden"></div>
+    <div id="gift-banner" class="gift-banner hidden">🎁 PODER REAL</div>
+
+    <ul id="feed" class="feed"></ul>
+
+    <div id="overlay" class="overlay hidden">
+      <p class="overlay-crown">👑</p>
+      <h2 id="overlay-title">¡REINADO LEGENDARIO!</h2>
+      <p id="overlay-sub"></p>
+    </div>
+
+    <footer class="foot">
+      <span id="demo-hint" class="demo-hint hidden">Demo: R unir · L tap · G regalo</span>
+    </footer>
+  </div>
+  <script src="js/rey.js" type="module"></script>
+</body>
+</html>

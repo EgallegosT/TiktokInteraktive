@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Arena Roblox Live — TikTok</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;700;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div id="app" class="stage">
+    <a href="/" class="back-link">← Menú</a>
+    <button id="tts-toggle" type="button" class="tts-pill on">🔊 Voz ON</button>
+    <div id="status" class="status-pill">Conectando…</div>
+
+    <header class="hud">
+      <div>
+        <p class="hud-tag">Overlay Roblox · 2D</p>
+        <h1>🏃 ARENA ROBLOX LIVE</h1>
+        <p class="hud-sub">Comenta tu usuario de Roblox y corre hacia la meta</p>
+      </div>
+      <div class="hud-right">
+        <p class="cta">Ej: <strong>TuUserRoblox</strong> o <strong>roblox TuUser</strong></p>
+        <p class="hint">👆 Tap empuja · 🎁 Nitro turbo</p>
+        <p class="round">Sprint <span id="round">1</span> · <span id="racer-n">0</span> corredores</p>
+      </div>
+    </header>
+
+    <main class="arena-wrap">
+      <div class="track-zone">
+        <div class="track-labels">
+          <span>SALIDA</span>
+          <span>🏁 META</span>
+        </div>
+        <div id="arena" class="arena">
+          <div id="lanes" class="lanes"></div>
+          <div class="finish-glow"></div>
+        </div>
+      </div>
+
+      <aside class="side">
+        <h2>🏆 Top sprint</h2>
+        <ol id="leaderboard" class="leaderboard"></ol>
+        <div id="combo-flash" class="combo-flash hidden">🔥 COMBO x2</div>
+        <p class="side-tip">¡El primero en la meta gana el sprint!</p>
+      </aside>
+    </main>
+
+    <div id="nitro-banner" class="nitro-banner hidden">⚡ NITRO</div>
+    <div id="narrator-banner" class="narrator-banner hidden"></div>
+
+    <ul id="feed" class="feed"></ul>
+
+    <div id="overlay" class="overlay hidden">
+      <img id="winner-avatar" class="winner-avatar" src="" alt="" />
+      <h2 id="overlay-title">¡GANADOR!</h2>
+      <p id="overlay-sub"></p>
+    </div>
+
+    <footer class="foot">
+      <span id="demo-hint" class="demo-hint hidden">Demo: U unir · L tap · G regalo</span>
+    </footer>
+  </div>
+  <script src="js/roblox.js" type="module"></script>
+</body>
+</html>

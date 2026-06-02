@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Carrera de estrellas — TikTok Live</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;700;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div id="app" class="stage">
+    <a href="/" class="back-link">← Menú</a>
+    <button id="tts-toggle" type="button" class="tts-pill on" title="Narrador y comentarios">🔊 Voz ON</button>
+    <div id="status" class="status-pill">Conectando…</div>
+
+    <header class="hud">
+      <div>
+        <p class="hud-tag">Carrera en vivo</p>
+        <h1>🏁 CARRERA DE ESTRELLAS</h1>
+        <p class="hud-sub">¡Lleva a tu favorito a la meta antes que el rival!</p>
+      </div>
+      <div class="hud-cta">
+        <p>Comenta <span class="cmd cmd-blue">1</span> o <span class="cmd cmd-red">2</span> · 👆 tap · 🎁 turbo</p>
+        <p class="round-line">Carrera <span id="round-label">1</span></p>
+      </div>
+    </header>
+
+    <main class="main">
+      <section class="race" aria-label="Pista">
+        <div class="race-head">
+          <span>SALIDA</span>
+          <span class="meta-label">🏁 META</span>
+        </div>
+        <div class="track-wrap">
+          <div class="lane lane-blue">
+            <div class="lane-label">DR SIMI</div>
+            <div id="trail-blue" class="trail"></div>
+            <div id="runner-blue" class="runner" aria-hidden="true">
+              <img src="/assets/images/1.jpg" alt="DR SIMI" class="runner-img" width="140" height="140" />
+            </div>
+          </div>
+          <div class="lane lane-red">
+            <div class="lane-label">GOKU</div>
+            <div id="trail-red" class="trail"></div>
+            <div id="runner-red" class="runner" aria-hidden="true">
+              <img src="/assets/images/2.jpg" alt="GOKU" class="runner-img" width="140" height="140" />
+            </div>
+          </div>
+          <div class="finish-line" title="Meta"></div>
+        </div>
+      </section>
+
+      <aside class="sidebar">
+        <section class="scoreboard">
+          <article class="team-card team-blue">
+            <span class="team-badge">
+              <img src="/assets/images/1.jpg" alt="" class="team-thumb" />
+              DR SIMI
+            </span>
+            <span id="count-blue" class="team-players">0</span>
+            <span class="team-meta">jugadores</span>
+            <span id="pct-blue" class="team-pct">0%</span>
+            <span id="streak-blue" class="team-streak hidden"></span>
+          </article>
+          <div class="vs">VS</div>
+          <article class="team-card team-red">
+            <span class="team-badge">
+              <img src="/assets/images/2.jpg" alt="" class="team-thumb" />
+              GOKU
+            </span>
+            <span id="count-red" class="team-players">0</span>
+            <span class="team-meta">jugadores</span>
+            <span id="pct-red" class="team-pct">0%</span>
+            <span id="streak-red" class="team-streak hidden"></span>
+          </article>
+        </section>
+        <div class="how-compact">
+          <p><span class="cmd cmd-blue">1</span> azul · <span class="cmd cmd-red">2</span> rojo</p>
+          <p>👆 empuja · 🎁 nitro + frena rival</p>
+        </div>
+      </aside>
+    </main>
+
+    <div id="narrator-banner" class="narrator-banner hidden" role="status"></div>
+    <div id="combo-banner" class="combo-banner hidden" role="status"></div>
+    <div id="nitro-banner" class="nitro-banner hidden" role="alert"></div>
+    <div id="slow-banner" class="slow-banner hidden" role="status"></div>
+
+    <div id="winner" class="winner hidden" role="dialog">
+      <div class="winner-portrait">
+        <img id="winner-img" class="winner-img" src="/assets/images/1.jpg" alt="Ganador" />
+      </div>
+      <p class="winner-title">¡GANÓ EL EQUIPO</p>
+      <p id="winner-team" class="winner-team"></p>
+      <p class="winner-next">Nueva carrera en unos segundos…</p>
+    </div>
+
+    <ul id="feed" class="feed" aria-label="Actividad"></ul>
+
+    <footer class="foot">
+      <span id="demo-hint" class="demo-hint hidden">Demo: 1 · 2 · L · G · T (voz)</span>
+    </footer>
+  </div>
+  <script src="js/game.js" type="module"></script>
+</body>
+</html>

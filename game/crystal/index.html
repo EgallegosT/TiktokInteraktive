@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bola de Cristal — TikTok Live</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="layout-top">
+  <div id="app" class="stage stream-band">
+    <a href="/" class="back-link stream-hide">← Menú</a>
+    <button id="tts-toggle" type="button" class="tts-pill on stream-hide">🔊 Voz</button>
+    <div id="status" class="status-pill stream-hide">Conectando…</div>
+
+    <header class="hud">
+      <div class="hud-top">
+        <h1>🔮 BOLA DE CRISTAL</h1>
+        <p class="hud-cta">¿TU PREGUNTA?</p>
+      </div>
+      <p class="hud-rules">Chat con <strong>?</strong> · 👆 <strong>TAP</strong> · 🎁 <strong>REGALO</strong> = te mencionamos</p>
+    </header>
+
+    <main class="main-row">
+      <section class="ball-zone">
+        <div id="ball" class="ball">
+          <div class="ball-shine"></div>
+          <div class="ball-mist" id="ball-mist"></div>
+          <p id="ball-phase" class="ball-phase">ESPERANDO…</p>
+        </div>
+        <div id="reading" class="reading hidden">
+          <p class="reading-from" id="reading-from"></p>
+          <p class="reading-q" id="reading-q"></p>
+          <p class="reading-a" id="reading-a"></p>
+        </div>
+      </section>
+
+      <aside class="info-col">
+        <div id="mention-line" class="info-line mention-line is-placeholder">
+          <span class="info-label">✨ Mención</span>
+          <p class="info-text">Tap o regalo → escribe tu pregunta</p>
+        </div>
+        <div id="vision-line" class="info-line vision-line is-placeholder">
+          <span class="info-label">📜 Visión</span>
+          <p class="info-text">Aquí aparece la última respuesta</p>
+        </div>
+        <p id="queue-line" class="queue-line hidden" aria-live="polite"></p>
+      </aside>
+    </main>
+
+    <div id="mention-banner" class="mention-banner hidden"></div>
+
+    <ul id="feed" class="feed" aria-hidden="true"></ul>
+
+    <footer class="foot stream-hide">
+      <span id="demo-hint" class="demo-hint hidden">Demo: P · M · G</span>
+    </footer>
+  </div>
+  <script src="js/crystal.js" type="module"></script>
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Dragón del Live — TikTok</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;700;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div id="app" class="stage">
+    <a href="/" class="back-link">← Menú</a>
+    <button id="tts-toggle" type="button" class="tts-pill on">🔊 Voz ON</button>
+    <div id="status" class="status-pill">Conectando…</div>
+
+    <header class="hud">
+      <div>
+        <p class="tag">Boss raid en vivo</p>
+        <h1>🐉 DRAGÓN DEL LIVE</h1>
+        <p class="sub">¡Derroten al dragón antes de que su furia explote!</p>
+      </div>
+      <div class="hud-right">
+        <p class="cta">Comenta <strong>atacar</strong> para ser héroe</p>
+        <p class="hint">👆 Tap = golpe · 🎁 = crítico épico</p>
+        <p class="diff-label" id="diff-label">Raid: patrulla</p>
+        <p class="round">Batalla <span id="round">1</span></p>
+      </div>
+    </header>
+
+    <main class="battle">
+      <div class="bars">
+        <div class="bar-block">
+          <div class="bar-head"><span>❤️ Vida del dragón</span><span id="hp-pct">100%</span></div>
+          <div class="bar-track hp-track"><div id="hp-bar" class="bar-fill hp-fill"></div></div>
+        </div>
+        <div class="bar-block rage-block">
+          <div class="bar-head"><span>🔥 Furia del dragón</span><span id="rage-pct">0%</span></div>
+          <div class="bar-track rage-track"><div id="rage-bar" class="bar-fill rage-fill"></div></div>
+        </div>
+      </div>
+
+      <div class="arena" id="arena">
+        <div id="fx-layer" class="fx-layer"></div>
+        <div id="heroes-layer" class="heroes-layer"></div>
+        <div id="dragon" class="dragon">
+          <div class="dragon-aura"></div>
+          <span class="dragon-emoji">🐉</span>
+          <p id="dragon-mood" class="dragon-mood">El dragón observa…</p>
+        </div>
+        <div id="crit-banner" class="crit-banner hidden">⚔️ CRÍTICO</div>
+        <div id="combo-flash" class="combo-flash hidden">🔥 COMBO x2</div>
+      </div>
+    </main>
+
+    <aside class="side">
+      <h2>⚔️ Héroes</h2>
+      <p class="hero-count"><span id="hero-n">0</span> en batalla</p>
+      <h2 class="dmg-title">💥 Daño total</h2>
+      <ol id="dmg-list" class="dmg-list"></ol>
+    </aside>
+
+    <ul id="feed" class="feed"></ul>
+
+    <div id="overlay" class="overlay hidden">
+      <p class="overlay-emoji" id="overlay-emoji">🏆</p>
+      <h2 id="overlay-title">¡VICTORIA!</h2>
+      <p id="overlay-sub"></p>
+    </div>
+
+    <footer class="foot">
+      <span id="demo-hint" class="demo-hint hidden">Demo: A · L · G</span>
+    </footer>
+  </div>
+  <script src="js/dragon.js" type="module"></script>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Cofre del Live — TikTok</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;700;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div id="app" class="stage">
+    <a href="/" class="back-link">← Menú</a>
+    <button id="tts-toggle" type="button" class="tts-pill on">🔊 Voz ON</button>
+    <div id="status" class="status-pill">Conectando…</div>
+
+    <header class="hud">
+      <div>
+        <p class="tag">Misión en vivo</p>
+        <h1>🪙 COFRE DEL LIVE</h1>
+        <p class="sub">¡Todos juntos abren el cofre antes de que se enfríe!</p>
+      </div>
+      <div class="hud-right">
+        <p class="cta">Comenta <strong>cofre</strong> para unirte</p>
+        <p class="hint">👆 Tap tap llena · 🎁 Regalo = lluvia de oro</p>
+        <p class="round">Ronda <span id="round">1</span></p>
+      </div>
+    </header>
+
+    <main class="arena">
+      <div class="pressure-wrap">
+        <span class="pressure-label">⏳ El cofre se enfría…</span>
+        <div class="pressure-track">
+          <div id="pressure-bar" class="pressure-bar"></div>
+        </div>
+      </div>
+
+      <div class="chest-zone">
+        <div id="orbit-layer" class="orbit-layer"></div>
+        <div id="chest" class="chest">
+          <div class="chest-lid" id="chest-lid">👑</div>
+          <div class="chest-body">🪙</div>
+        </div>
+        <div id="combo-flash" class="combo-flash hidden">🔥 x2 HYPE</div>
+      </div>
+
+      <div class="progress-block">
+        <div class="progress-meta">
+          <span id="pct-label">0%</span>
+          <span id="hunter-count">0 cazadores</span>
+        </div>
+        <div class="progress-track">
+          <div id="fill-bar" class="fill-bar"></div>
+        </div>
+        <p id="goal-hint" class="goal-hint">¡Lleguen al 100% para abrir el cofre!</p>
+      </div>
+    </main>
+
+    <aside class="side">
+      <h2>⚡ Top impulso</h2>
+      <ol id="top-list" class="top-list"></ol>
+    </aside>
+
+    <ul id="feed" class="feed"></ul>
+
+    <div id="victory" class="victory hidden">
+      <p class="victory-emoji">🎉✨🪙</p>
+      <h2>¡COFRE ABIERTO!</h2>
+      <p id="victory-sub">El chat lo logró juntos</p>
+    </div>
+
+    <footer class="foot">
+      <span id="demo-hint" class="demo-hint hidden">Demo: C unir · L tap · G regalo</span>
+    </footer>
+  </div>
+  <script src="js/cofre.js" type="module"></script>
+</body>
+</html>

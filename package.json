@@ -1,0 +1,19 @@
+{
+  "name": "tiktok-interaktive",
+  "version": "1.0.0",
+  "description": "Experiencias interactivas para TikTok Live — carreras, minijuegos y overlays colaborativos",
+  "type": "module",
+  "scripts": {
+    "start": "node bridge/index.js",
+    "stop": "node scripts/stop.js",
+    "dev": "node bridge/index.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "tiktok-live-connector": "^1.2.3",
+    "ws": "^8.18.0"
+  }
+}
